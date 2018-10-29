@@ -1,0 +1,9 @@
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\bin\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.deps.json
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\bin\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.dll
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\bin\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.pdb
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\obj\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.csproj.CoreCompileInputs.cache
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\obj\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.AssemblyInfoInputs.cache
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\obj\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.AssemblyInfo.cs
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\obj\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.dll
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\obj\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.pdb
+D:\Projects\DotNetNexusClient\Boxsie.DotNetNexusClient\obj\Debug\netcoreapp2.1\Boxsie.DotNetNexusClient.csprojAssemblyReference.cache

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxsie.DotNetNexusClient", "Boxsie.DotNetNexusClient\Boxsie.DotNetNexusClient.csproj", "{D6FCA8A0-8217-42C1-B817-6AFB0F409803}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14B8CFF3-3F8C-454D-8C0A-55D2AAF704AF}
+	EndGlobalSection
+EndGlobal
