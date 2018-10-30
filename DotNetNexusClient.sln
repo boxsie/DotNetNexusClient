@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxsie.DotNetNexusClient", "Boxsie.DotNetNexusClient.csproj", "{D6FCA8A0-8217-42C1-B817-6AFB0F409803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boxsie.DotNetNexusClient", "Boxsie.DotNetNexusClient\Boxsie.DotNetNexusClient.csproj", "{D6FCA8A0-8217-42C1-B817-6AFB0F409803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxsie.DotNetNexusClient.Tests", "Boxsie.DotNetNexusClient.Tests\Boxsie.DotNetNexusClient.Tests.csproj", "{03E59E2A-8727-48BD-8D5F-799E05505501}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FCA8A0-8217-42C1-B817-6AFB0F409803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E59E2A-8727-48BD-8D5F-799E05505501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E59E2A-8727-48BD-8D5F-799E05505501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E59E2A-8727-48BD-8D5F-799E05505501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E59E2A-8727-48BD-8D5F-799E05505501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

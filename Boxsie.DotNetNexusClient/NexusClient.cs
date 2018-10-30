@@ -130,12 +130,12 @@ namespace Boxsie.DotNetNexusClient
             }
         }
 
-        private HttpClient CreateClient(Uri uri, string auth64)
+        private static HttpClient CreateClient(Uri uri, string auth64)
         {
             var client = new HttpClient { BaseAddress = uri };
 
-            _client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"Basic {auth64}");
-            _client.DefaultRequestHeaders.CacheControl = CacheControlHeaderValue.Parse("no-cache");
+            client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse($"Basic {auth64}");
+            client.DefaultRequestHeaders.CacheControl = CacheControlHeaderValue.Parse("no-cache");
 
             return client;
         }
