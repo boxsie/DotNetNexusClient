@@ -1,0 +1,8 @@
+# DotNetNexusClient
+A dot net RPC client for the Nexus wallet
+
+This will allow you to make RPC calls to a Nexus node within the dot net core framework.
+
+Ensure you have RPC access to a Nexus node and then create the NexusClient object using the following connection string format...
+
+```var client = new NexusClient("localhost:9336;Username=moop;Password=moop")```
