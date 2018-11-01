@@ -19,5 +19,6 @@ namespace Boxsie.DotNetNexusClient.Core
         Task<MiningInfoResponse> GetMiningInfoAsync();
         Task<SupplyRatesResponse> GetSupplyRatesAsync();
         Task<TrustKeyResponse> GetTrustKeysAsync();
+        Task<bool> IsBlockHashOnChainAsync(string blockHash);
     }
 }

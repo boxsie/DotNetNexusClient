@@ -8,7 +8,7 @@ namespace Boxsie.DotNetNexusClient.Core
         public T Result { get; set; }
 
         [JsonProperty("error")]
-        public object Error { get; set; }
+        public RpcError Error { get; set; }
 
         [JsonProperty("id")]
         public int Id { get; set; }

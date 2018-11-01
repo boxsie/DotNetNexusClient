@@ -108,7 +108,27 @@ namespace Boxsie.DotNetNexusClient
             return await GetAsync<SupplyRatesResponse, SupplyRatesRequest>(new SupplyRatesRequest());
         }
 
+        public async Task<bool> IsBlockHashOnChainAsync(string blockHash)
+        {
+            var response = await GetAsync<bool?, IsOrphanRequest>(new IsOrphanRequest(blockHash));
+
+            return response.HasValue && !response.Value;
+        }
+
         private async Task<T> GetAsync<T, TY>(TY request) where TY : BaseRequest
+        {
+            var response = await GetResponseAsync<T, TY>(request);
+
+            if (response.Error == null)
+                return response.Result;
+
+            Console.WriteLine(response.Error.Code);
+            Console.WriteLine(response.Error.Message);
+
+            return default(T);
+        }
+
+        private async Task<RpcResponse<T>> GetResponseAsync<T, TY>(TY request) where TY : BaseRequest
         {
             try
             {
@@ -116,9 +136,7 @@ namespace Boxsie.DotNetNexusClient
 
                 var responseJson = await httpResponseMessage.Content.ReadAsStringAsync();
 
-                var response = JsonConvert.DeserializeObject<RpcResponse<T>>(responseJson, _settings);
-
-                return response.Result;
+                return JsonConvert.DeserializeObject<RpcResponse<T>>(responseJson, _settings);
             }
             catch (Exception e)
             {
@@ -126,7 +144,7 @@ namespace Boxsie.DotNetNexusClient
                 Console.WriteLine(e.InnerException);
                 Console.WriteLine(e.StackTrace);
 
-                return default(T);
+                return null;
             }
         }
 
