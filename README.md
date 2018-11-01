@@ -1,5 +1,5 @@
 # DotNetNexusClient
-A dot net RPC client for the Nexus wallet (0.2.5.1)
+A dot net RPC client for the Nexus wallet (0.2.5.4)
 
 This will allow you to make RPC calls to a Nexus node within the dot net core framework.
 
