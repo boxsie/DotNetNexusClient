@@ -8,10 +8,10 @@ namespace Boxsie.DotNetNexusClient.Response
         [JsonProperty("address")]
         public string AddressHash { get; set; }
 
-        [JsonProperty("interest rate")]
+        [JsonProperty("interestrate")]
         public double InterestRate { get; set; }
 
-        [JsonProperty("trust key")]
+        [JsonProperty("trustkey")]
         [JsonConverter(typeof(TrustKeyDataConverter))]
         public TrustKeyDataResponse Key { get; set; }
     }

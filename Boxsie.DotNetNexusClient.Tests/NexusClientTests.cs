@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -55,6 +56,28 @@ namespace Boxsie.DotNetNexusClient.Tests
                     Assert.True(false);
                     break;
             }
+        }
+
+        [Fact]
+        public async Task NexusClient_GetDifficultyResponseSerialisation_NothingIsZero()
+        {
+            var diff = await _clientFixture.Client.GetNetworkDifficultyAsync();
+
+            _output.WriteLine($"HASH = {diff.HashChannel}\nPRIME = {diff.PrimeChannel}\nPOS = {diff.ProofOfStake}");
+
+            Assert.True(diff.HashChannel > 0 && diff.PrimeChannel > 0 && diff.ProofOfStake > 0);
+        }
+
+        [Fact]
+        public async Task NexusClient_GetTrustKeysResponseSerialisation_NothingIsNullOrEmptyOrZero()
+        {
+            var keyResponse = await _clientFixture.Client.GetTrustKeysAsync();
+
+            _output.WriteLine($"{keyResponse.Keys.Count} keys");
+
+            Assert.True(keyResponse.Keys.Count > 0 && 
+                        keyResponse.Keys.All(x => x.Key != null) && 
+                        keyResponse.Keys.All(x => x.InterestRate > 0));
         }
     }
 }

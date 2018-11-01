@@ -4,13 +4,13 @@ namespace Boxsie.DotNetNexusClient.Response
 {
     public class DifficultyResponse
     {
-        [JsonProperty("prime - channel")] 
+        [JsonProperty("prime")] 
         public double PrimeChannel { get; set; }
 
-        [JsonProperty("hash  - channel")]
+        [JsonProperty("hash")]
         public double HashChannel { get; set; }
 
-        [JsonProperty("proof-of-stake")]
+        [JsonProperty("stake")]
         public double ProofOfStake { get; set; }
     }
 }
