@@ -16,8 +16,9 @@ namespace Boxsie.DotNetNexusClient
     {
         private readonly HttpClient _client;
         private readonly JsonSerializerSettings _settings;
+        private readonly bool _outputErrors;
 
-        public NexusClient(string connectionString)
+        public NexusClient(string connectionString, bool outputErrors = false)
         {
             var connSplit = connectionString.Split(';');
 
@@ -29,6 +30,8 @@ namespace Boxsie.DotNetNexusClient
             _client = CreateClient(new Uri(url), auth64);
 
             _settings = new JsonSerializerSettings { DateTimeZoneHandling = DateTimeZoneHandling.Utc };
+
+            _outputErrors = outputErrors;
         }
 
         public async Task<InfoResponse> GetInfoAsync()
@@ -122,8 +125,11 @@ namespace Boxsie.DotNetNexusClient
             if (response.Error == null)
                 return response.Result;
 
-            Console.WriteLine(response.Error.Code);
-            Console.WriteLine(response.Error.Message);
+            if (_outputErrors)
+            {
+                Console.WriteLine(response.Error.Code);
+                Console.WriteLine(response.Error.Message);
+            }
 
             return default(T);
         }
@@ -140,9 +146,12 @@ namespace Boxsie.DotNetNexusClient
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.InnerException);
-                Console.WriteLine(e.StackTrace);
+                if (_outputErrors)
+                {
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine(e.InnerException);
+                    Console.WriteLine(e.StackTrace);
+                }
 
                 return null;
             }
