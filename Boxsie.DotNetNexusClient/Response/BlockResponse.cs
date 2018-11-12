@@ -26,7 +26,7 @@ namespace Boxsie.DotNetNexusClient.Response
 
         [JsonProperty("time")]
         [JsonConverter(typeof(UtcDateTimeConverter))]
-        public DateTime Time { get; set; }
+        public DateTime Timestamp { get; set; }
 
         [JsonProperty("nonce")]
         public double Nonce { get; set; }

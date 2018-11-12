@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Boxsie.DotNetNexusClient.JsonConverters;
+using Newtonsoft.Json;
 
 namespace Boxsie.DotNetNexusClient.Response
 {
@@ -11,18 +13,20 @@ namespace Boxsie.DotNetNexusClient.Response
         public string BlockHash { get; set; }
 
         [JsonProperty("txid")]
-        public string TxId { get; set; }
+        public string TransactionHash { get; set; }
 
         [JsonProperty("time")]
         public int Time { get; set; }
 
         [JsonProperty("amount")]
         public double Amount { get; set; }
+        
+        [JsonProperty("outputs")]
+        [JsonConverter(typeof(InputOutputConverter))]
+        public List<TransactionInputOutputResponse> Outputs { get; set; }
 
         [JsonProperty("inputs")]
-        public string[] Inputs { get; set; }
-
-        [JsonProperty("outputs")]
-        public string[] Outputs { get; set; }
+        [JsonConverter(typeof(InputOutputConverter))]
+        public List<TransactionInputOutputResponse> Inputs { get; set; }
     }
 }

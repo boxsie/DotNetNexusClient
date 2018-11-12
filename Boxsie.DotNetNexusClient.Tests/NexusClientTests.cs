@@ -92,5 +92,17 @@ namespace Boxsie.DotNetNexusClient.Tests
 
             Assert.True(!isFakeHashOnChain);
         }
+
+        [Fact]
+        public async Task NexusClient_GetGenesisTransaction_ReturnsTransaction()
+        {
+            var block = await _clientFixture.Client.GetBlockAsync(GenesisHash);
+            var tx = await _clientFixture.Client.GetTransactionAsync(block.TransactionHash.First());
+
+            _output.WriteLine($"Genesis address hash = {tx.Outputs.First().AddressHash}");
+            _output.WriteLine($"Genesis transaction amount = {tx.Outputs.First().Amount}");
+
+            Assert.True(tx?.Outputs != null);
+        }
     }
 }
